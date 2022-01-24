@@ -11,9 +11,14 @@ SKIP_FRAMES = 2
 TRAINING_BATCH_SIZE = 64
 SAVE_TRAINING_FREQUENCY = 50
 UPDATE_TARGET_MODEL_FREQUENCY = 10
+from IPython import display
+import matplotlib.pyplot as plt
+%matplotlib inline
 
 if __name__ == '__main__':
+    disable_view_window()
     env = gym.make("CarRacing-v0")
+
     agent = DQNAgent()
 
     for e in range(STARTING_EPISODE, ENDING_EPISODE):
