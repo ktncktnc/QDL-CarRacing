@@ -6,7 +6,7 @@ from funcs import *
 
 RENDER = False
 STARTING_EPISODE = 1
-ENDING_EPISODE = 1000
+ENDING_EPISODE = 500
 SKIP_FRAMES = 2
 TRAINING_BATCH_SIZE = 64
 SAVE_TRAINING_FREQUENCY = 50
@@ -19,6 +19,7 @@ if __name__ == '__main__':
     agent = DQNAgent()
 
     for e in range(STARTING_EPISODE, ENDING_EPISODE):
+        print("Episode " + str(e))
         init_state = env.reset()
         init_state = process_state_image(init_state)
 
